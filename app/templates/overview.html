@@ -1,0 +1,25 @@
+<div class="overview-body" ng-controller="OverviewCtrl">
+    <h1>Overview</h1>
+    <div class="jumbotron my-jumbotron">
+        <div style="font-size:30px;font-weight: bold;">{{profile.username}}-{{profile.nickname}}</div>
+        <div><img ng-src={{profile.profileImage}} class="my-image"></img>
+        </div>
+        <p>Welcome to the feedback application. This feedback application is based on a dashboard application, more functionalities achieved by doing so, the functions can be accessed by the left side navigation bars.</p>
+        <uib-accordion close-others="oneAtATime">
+            <uib-accordion-group heading="Work Section"> This section contains the demonstration for the display of pictures, including filter and sorting, adding and remove.
+            </uib-accordion-group>
+        </uib-accordion>
+        <uib-accordion close-others="oneAtATime">
+            <uib-accordion-group heading="Feedback Section">This section contains the feedback messages functionality which contains view list and textarea to send.
+            </uib-accordion-group>
+        </uib-accordion>
+         <uib-accordion close-others="oneAtATime">
+            <uib-accordion-group heading="Video Section">This section shows a set of videos which are displayed as Carousel, users can upload their comments to the video.
+            </uib-accordion-group>
+        </uib-accordion>
+        <uib-accordion close-others="oneAtATime">
+            <uib-accordion-group heading="Contact Section">This section provides a gateway for users to send an overview.
+            </uib-accordion-group>
+        </uib-accordion>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div ng-controller='feedbackCtrl' style="width:90%;margin:0 auto;">
+    <div class="container-fluid">
+        <div class="col-sm-12 col-md-5 col-lg-5" >
+            <h3 style="font-weight: bold;color:#E33119;">Recipients List</h3>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"><span class='recipientsList' ng-click='openTextarea("John")'>John</span></li>
+                <li class="list-group-item list-group-item-warning"><span class='recipientsList' ng-click='openTextarea("Sam")'>Sam</span></li>
+                <li class="list-group-item list-group-item-danger"><span class='recipientsList' ng-click='openTextarea("Chris")'>Chris</span></li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-5 col-lg-5" style="float:right;">
+            <h3 style="font-weight: bold;color:#E33119">Messages List</h3>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="feedback in feedbacks"><span class="c-username">{{feedback.author}}</span><span class="c-time">{{feedback.creatTime| date:'medium' }}</span>
+                    <div class="c-comment">{{feedback.feedback}}</div>
+                </li>
+            </ul>
+        </div>
+        <text-area title="Feedback" visible="textVisible" item="editItem"></text-area>
+    </div>
+</div>
